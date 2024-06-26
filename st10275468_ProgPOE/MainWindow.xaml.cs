@@ -16,12 +16,12 @@ namespace st10275468_ProgPOE
             InitializeComponent();
         }
 
-        private void btnAddRecipe_Click(object sender, RoutedEventArgs e)
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             AddRecipe addRecipe = new AddRecipe();
             addRecipe.Show();
             this.Close();
-           
         }
     }
 }

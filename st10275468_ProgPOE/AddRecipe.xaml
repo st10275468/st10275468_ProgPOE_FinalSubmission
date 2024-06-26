@@ -25,8 +25,8 @@
 
         </StackPanel>
         <Label Content="------Create a new Recipe-------" Margin="0,10,0,9" Width="356" HorizontalAlignment="Center" FontFamily="Roboto" Grid.Column="1" Padding="0,0,0,0" Foreground="Black" FontSize="25"/>
-        <TextBox x:Name="txtName" TextWrapping="Wrap" Grid.Column="1" Margin="181,10,147,368" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <Label Content="Ingredient Name:" Margin="78,82,0,289" Width="96" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Grid.Column="1" Margin="180,46,148,382" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" Grid.RowSpan="2" />
+        <Label Content="Ingredient Name:" Margin="78,58,0,313" Width="96" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -36,19 +36,20 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Recipe Name:" Margin="98,12,0,359" Width="78" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <Label Content="Recipe Name:" Margin="98,47,0,374" Width="78" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Column="1" RenderTransformOrigin="0.539,-0.758" Grid.RowSpan="2" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="-0.086"/>
-                    <TranslateTransform/>
+                    <TranslateTransform X="-0.054" Y="-0.005"/>
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtName_Copy" TextWrapping="Wrap" Grid.Column="1" Margin="180,114,148,264" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <TextBox x:Name="txtName_Copy1" TextWrapping="Wrap" Grid.Column="1" Margin="180,79,148,299" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <Label Content="----Repeat for each ingredient----" Margin="75,50,0,321" Width="224" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="15" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <TextBox x:Name="txtQuantity" TextWrapping="Wrap" Grid.Column="1" Margin="180,90,148,288" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
+       
+        <TextBox x:Name="txtIngredientName" TextWrapping="Wrap" Grid.Column="1" Margin="180,55,148,323" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
+        <Label Content="----Repeat for each ingredient----" Margin="75,26,0,345" Width="224" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="15" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -58,7 +59,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Unit of measurement:" Margin="55,147,0,225" Width="119" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <Label Content="Unit of measurement:" Margin="55,123,0,249" Width="119" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -68,7 +69,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Ingredient Quantity:" Margin="64,117,0,255" Width="119" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <Label Content="Ingredient Quantity:" Margin="64,93,0,279" Width="119" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -78,7 +79,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Amount of Calories:" Margin="65,177,0,202" Width="114" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <Label Content="Amount of Calories:" Margin="65,153,0,226" Width="114" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -88,7 +89,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Food group:" Margin="105,207,0,163" Width="104" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <Label Content="Food group:" Margin="105,183,0,187" Width="104" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -98,11 +99,10 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtName_Copy2" TextWrapping="Wrap" Grid.Column="1" Margin="180,144,148,234" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <TextBox x:Name="txtName_Copy3" TextWrapping="Wrap" Grid.Column="1" Margin="180,174,148,204" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <TextBox x:Name="txtName_Copy4" TextWrapping="Wrap" Grid.Column="1" Margin="181,204,147,174" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <Button x:Name="btnAddIngredient" Content="Add Ingredient" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="btnBack_Click" Grid.Column="1" Margin="181,233,175,142" Grid.Row="1"/>
-        <Label Content="Enter step description:" Margin="45,304,0,66" Width="129" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <TextBox x:Name="txtMeasurement" TextWrapping="Wrap" Grid.Column="1" Margin="180,120,148,258" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
+        <TextBox x:Name="txtCalories" TextWrapping="Wrap" Grid.Column="1" Margin="180,150,148,228" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
+        <Button x:Name="btnAddIngredient" Content="Add Ingredient" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="btnAddIngredient_Click" Grid.Column="1" Margin="179,209,177,166" Grid.Row="1"/>
+        <Label Content="Enter step description:" Margin="45,280,0,90" Width="129" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -112,7 +112,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="----Repeat for each Step----" Margin="75,272,0,99" Width="224" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="15" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
+        <Label Content="----Repeat for each Step----" Margin="75,248,0,123" Width="224" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="15" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -122,8 +122,18 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="txtName_Copy5" TextWrapping="Wrap" Grid.Column="1" Margin="179,294,52,44" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
-        <Button x:Name="btnAddStep" Content="Add Step" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="btnBack_Click" Grid.Column="1" Margin="179,361,205,14" Grid.Row="1"/>
+        <TextBox x:Name="txtDescription" TextWrapping="Wrap" Grid.Column="1" Margin="179,270,52,68" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
+        <Button x:Name="btnAddStep" Content="Add Step" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="btnAddStep_Click" Grid.Column="1" Margin="179,337,205,38" Grid.Row="1"/>
+        <Button x:Name="btnAddRecipe" Content="Add Recipe" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="btnAddRecipe_Click_1" Grid.Column="1" Margin="360,365,18,10" Grid.Row="1"/>
+        <ComboBox x:Name="cmbFoodGroup" HorizontalAlignment="Left" Margin="180,182,0,0" Grid.Row="1" VerticalAlignment="Top" Width="173" Grid.Column="1" SelectedIndex="0" Background="White">
+            <ComboBoxItem Content="Starchy foods"/>
+            <ComboBoxItem Content="Vegetables/fruits"/>
+            <ComboBoxItem Content="Meat"/>
+            <ComboBoxItem Content="Dairy products"/>
+            <ComboBoxItem Content="Fat/oils"/>
+            <ComboBoxItem Content="Dry beans/peas/soya"/>
+            <ComboBoxItem Content="Water"/>
+        </ComboBox>
 
     </Grid>
 

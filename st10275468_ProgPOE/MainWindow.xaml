@@ -21,13 +21,9 @@
 
         <StackPanel Grid.RowSpan="2" Background="White" Margin="1,0,0,0">
 
-            <Button x:Name="btnCreate" Content="Create a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,70,10,10" Click="btnAddRecipe_Click"/>
-            <Button x:Name="btnDisplay" Content="Display a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,1,10,10" Click="btnAddRecipe_Click"/>
-            <Button x:Name="btnScale" Content="Scale a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,1,10,10" Click="btnAddRecipe_Click"/>
-            <Button x:Name="btnResetScale" Content="Reset Scale" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,1,10,10" Click="btnAddRecipe_Click"/>
-            <Button x:Name="btnDelete" Content="Delete a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,1,10,10" Click="btnAddRecipe_Click"/>
-            <Button x:Name="btnExit" Content="Exit" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,1,10,10" Click="btnAddRecipe_Click"/>
-
+            <Button x:Name="btnCreate" Content="Create a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,70,10,10" Click="btnCreate_Click"/>
+    
+           
         </StackPanel>
     </Grid>
 
