@@ -28,7 +28,7 @@ namespace st10275468_ProgPOE
         {
             AddRecipe addRecipe;
             
-        }
+        } 
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
