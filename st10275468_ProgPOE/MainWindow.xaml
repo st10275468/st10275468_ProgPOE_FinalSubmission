@@ -22,9 +22,31 @@
         <StackPanel Grid.RowSpan="2" Background="White" Margin="1,0,0,0">
 
             <Button x:Name="btnCreate" Content="Create a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,70,10,10" Click="btnCreate_Click"/>
-    
-           
+
+
         </StackPanel>
+        <Button x:Name="btnDisplay" Content="Refresh list of recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplay_Click" Margin="13,70,13,290" Grid.Row="1"/>
+        <ComboBox Name="comboBoxRecipes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,28,0,0" Width="175" SelectionChanged="comboBoxRecipes_SelectionChanged" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.514,0.592"/>
+
+        <TextBlock Name="textBlockRecipeDetails" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Width="341" Height="250" TextWrapping="Wrap" Background="White" Grid.Column="1" Grid.Row="1"/>
+        <StackPanel Grid.RowSpan="2" Background="White" Margin="1,0,0,0" RenderTransformOrigin="3.302,0.367">
+
+            <Button x:Name="btnCreate1" Content="Create a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,70,10,10" Click="btnCreate_Click"/>
+
+
+        </StackPanel>
+        <Button x:Name="btnDisplay_Copy" Content="Refresh list of recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplay_Click" Margin="5,55,299,323" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Choose a recipe to display:" Margin="13,12,0,373" Width="156" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
     </Grid>
 
 

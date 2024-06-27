@@ -30,16 +30,16 @@ namespace st10275468_ProgPOE
             return ingredient;
         }
 
- }
+    }
     public class Step
     {
         public string stepDescription { get; set; }  //Creating a new step object
-       
 
-        public Step(string fStepDescription )
+
+        public Step(string fStepDescription)
         {                                           //Giving the object properties
             stepDescription = fStepDescription;
-            
+
 
         }
         public string GetStep()
@@ -49,7 +49,7 @@ namespace st10275468_ProgPOE
         }
 
     }
-   public class Recipe
+    public class Recipe
     {
         public string recipeName { get; set; }
         public List<Ingredient> recipeIngredients { get; set; }     //Storing a list of ingredients in each recipe
@@ -72,6 +72,15 @@ namespace st10275468_ProgPOE
         {
             recipeSteps.Add(step);
         }
-     
+        public void GetIngredients(string fName, double fQuantity, string fUnit, double fCalories, string fGroup)
+        {
+            Ingredient ingredient = new Ingredient(fName, fQuantity, fUnit, fGroup, fCalories);
+            AddIngredient(ingredient);
+        }
+        public void GetSteps(string fStepDescription)
+        {
+            Step step = new Step(fStepDescription);
+            AddStep(step);
+        }
     }
 }
