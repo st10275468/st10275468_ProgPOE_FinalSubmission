@@ -26,33 +26,159 @@
 
         </StackPanel>
         <Button x:Name="btnDisplay" Content="Refresh list of recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplay_Click" Margin="13,70,13,290" Grid.Row="1"/>
-        <ComboBox Name="comboBoxRecipes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,28,0,0" Width="175" SelectionChanged="comboBoxRecipes_SelectionChanged" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.514,0.592"/>
+        <ComboBox Name="comboBoxRecipes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,30,0,0" Width="86" SelectionChanged="comboBoxRecipes_SelectionChanged" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.514,0.592"/>
 
-        <TextBlock Name="textBlockRecipeDetails" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Width="341" Height="250" TextWrapping="Wrap" Background="White" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Name="textBlockRecipeDetails" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Width="165" Height="250" TextWrapping="Wrap" Background="White" Grid.Column="1" Grid.Row="1"/>
         <StackPanel Grid.RowSpan="2" Background="White" Margin="1,0,0,0" RenderTransformOrigin="3.302,0.367">
 
             <Button x:Name="btnCreate1" Content="Create a Recipe" Height="40" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Margin="10,70,10,10" Click="btnCreate_Click"/>
 
 
         </StackPanel>
-        <Button x:Name="btnDisplay_Copy" Content="Refresh list of recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplay_Click" Margin="5,55,299,323" Grid.Row="1" Grid.Column="1"/>
-        <Label Content="Choose a recipe below to adjust or display:" Margin="11,7,0,378" Width="236" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
+        <Button x:Name="btnDisplay_Copy" Content="Refresh" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplay_Click" Margin="13,29,385,349" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.427"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Choose recipe to display/scale:" Margin="11,7,0,378" Width="167" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="-0.065"/>
-                    <TranslateTransform/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="btnDisplayAlpha" Content="Display all recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplayAlpha_Click" Margin="6,83,6,280" Grid.Row="1"/>
-        <Button x:Name="btnScale" Content="Scale recipe" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnScale_Click" Margin="285,29,80,349" Grid.Row="1" Grid.Column="1"/>
-        <ComboBox x:Name="comboBoxScale" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,29,0,0" Width="60" Grid.Column="1" Height="22" Grid.Row="1">
+        <Button x:Name="btnDisplayAlpha" Content="Display all recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplayAlpha_Click" Margin="10,84,1,286" Grid.Row="1"/>
+        <Button x:Name="btnScale" Content="Scale recipe" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnScale_Click" Margin="309,29,51,349" Grid.Row="1" Grid.Column="1"/>
+        <ComboBox x:Name="comboBoxScale" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="204,30,0,0" Width="86" Grid.Column="1" Height="22" Grid.Row="1">
             <ComboBoxItem Content="Half"/>
             <ComboBoxItem Content="Double"/>
             <ComboBoxItem Content="Triple"/>
         </ComboBox>
+        <Label Content="Scale Choice:" Margin="202,7,0,378" Width="78" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="2.09,0.877" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.154"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="btnFilterIngredient" Content="Filter" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="" Margin="392,109,14,266" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.293"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="-------Filter recipes-------" Margin="249,58,0,319" Width="184" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="15" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="btnFilterCalories" Content="Filter" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="" Margin="392,178,14,197" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.293"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnFilterFoodgroup" Content="Filter" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="12" Click="" Margin="392,243,14,132" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.293"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Filter by Ingredient:" Margin="285,84,0,301" Width="167" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Filter by Food group:" Margin="284,149,0,236" Width="119" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Filter by calories:" Margin="289,216,0,169" Width="167" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="txtIngredientChoice" TextWrapping="Wrap" Grid.Column="1" Margin="300,110,78,268" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
+        <Label Content="Enter Ingredient:" Margin="207,114,0,271" Width="95" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Select group:" Margin="224,183,0,202" Width="75" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.84,0.736" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.005" Y="-0.045"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Enter max calories:" Margin="192,248,0,137" Width="110" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.764,0.869" Grid.Row="1" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform X="0.007" Y="-0.038"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <ComboBox x:Name="comboBoxScale_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,178,0,0" Width="82" Grid.Column="1" Height="22" Grid.Row="1">
+            <ComboBoxItem Content="Half"/>
+            <ComboBoxItem Content="Double"/>
+            <ComboBoxItem Content="Triple"/>
+        </ComboBox>
+        <TextBox x:Name="txtMaxCalories" TextWrapping="Wrap" Grid.Column="1" Margin="296,244,82,134" Grid.Row="1" Background="White" BorderBrush="#00ABADB3" FontFamily="Roboto" VerticalContentAlignment="Center" Foreground="Black" FontSize="12" />
     </Grid>
 
 
