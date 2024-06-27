@@ -39,6 +39,12 @@ namespace st10275468_ProgPOE
             this.Close();
         }
 
+        /// <summary>
+        /// Adds an ingredient to the recipe when the button is clicked.
+        /// The user must input all the text boxes first
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddIngredient_Click(object sender, RoutedEventArgs e)
         {
             
@@ -50,34 +56,42 @@ namespace st10275468_ProgPOE
             double.TryParse(txtCalories.Text, out calories);
             string foodGroup = cmbFoodGroup.Text;
 
-            currentRecipe.GetIngredients(name, quantity, measurement, calories, foodGroup);
-
-            
-            
+            currentRecipe.GetIngredients(name, quantity, measurement, calories, foodGroup); //Adding the ingredients to the recipe
+ 
             MessageBox.Show("Ingredient successfully added");
             txtIngredientName.Clear();
             txtQuantity.Clear();
-            txtMeasurement.Clear();
+            txtMeasurement.Clear(); //Clearing all the textboxes
             txtCalories.Clear();
             txtIngredientName.Focus();
 
         }
 
+        /// <summary>
+        /// Takes the name and creates a new recipe with the name and adds it to the recipe list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddRecipe_Click_1(object sender, RoutedEventArgs e)
         {
             currentRecipe.recipeName = txtName.Text;
-            ((MainWindow)this.Owner).AddRecipeToList(currentRecipe);
+            ((MainWindow)this.Owner).AddRecipeToList(currentRecipe); //adding it to the list of recipes
             MessageBox.Show("Recipe successfully added");
             txtName.Clear();
             txtName.Focus();
-            currentRecipe = new Recipe("");
+            currentRecipe = new Recipe(""); //Setting current recipe back to null so they can create another recipe
         }
 
+        /// <summary>
+        /// Allows the user to create steps for the recipes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddStep_Click(object sender, RoutedEventArgs e)
         {
 
             string stepDescription = txtDescription.Text;
-            currentRecipe.GetSteps(stepDescription);
+            currentRecipe.GetSteps(stepDescription); //adding the steps to the recipe
 
             MessageBox.Show("Step successfully added");
             txtDescription.Clear();
