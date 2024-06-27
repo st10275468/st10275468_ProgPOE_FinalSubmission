@@ -131,19 +131,19 @@ namespace st10275468_ProgPOE
             }
             else
             {
-                MessageBox.Show("Enter an ingredient");
+                MessageBox.Show("Cannot filter recipes");
             }
         }
         private void DisplayFilteredRecipes(List<Recipe> recipes)
         {
             if (recipes.Count == 0)
             {
-                MessageBox.Show("No recipes with {0} found!", txtIngredientChoice.Text );
+                MessageBox.Show("No recipes found with that filter") ;
             }
             else
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("All recipes with " + txtIngredientChoice.Text +":");
+                sb.AppendLine("Filtered recipes:");
                 foreach (var recipe in recipes)
                 {
                     sb.AppendLine(recipe.recipeName);
@@ -151,34 +151,72 @@ namespace st10275468_ProgPOE
                 textBlockRecipeDetails.Text = sb.ToString();
             }
         }
+
+        private void btnFilterFoodgroup_Click(object sender, RoutedEventArgs e)
+        {
+            string foodGroup = cmbFilterFoodGroup.SelectedItem.ToString();
+            if (!string.IsNullOrEmpty(foodGroup))
+            {
+              
+                foodGroup = foodGroup.ToLower();
+                List<Recipe> recipes = recipeList.Where(r => r.recipeIngredients.Any(i => i.ingredientgrouping.ToLower() == foodGroup)).ToList();
+                 DisplayFilteredRecipes(recipes);
+            }
+            else
+            {
+                MessageBox.Show("No recipes found with that food group");
+            }
+        }
+
+        private void btnFilterCalories_Click(object sender, RoutedEventArgs e)
+        {
+            
+           if( double.TryParse(txtMaxCalories.Text, out double calories))
+            {
+                List<Recipe> recipes = recipeList.Where(r =>
+                {
+                    double totalCalories = r.recipeIngredients.Sum(i => i.ingredientCalories);
+                    return totalCalories < calories; 
+                }).ToList();
+
+                DisplayFilteredRecipes(recipes);
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid number");
+            }
+
+
+
+        }
         /*   private void ScaleChoice( Recipe recipeChoice, string scale)
-  {
-      if (scale == "Half")
-      {
-          ScaleRecipe(recipeChoice, 0.5);
-      }
-      if(scale == "Double")
-      {
-          ScaleRecipe(recipeChoice, 2);
-      }
-      else if (scale == "Triple")
-      {
-          ScaleRecipe(recipeChoice, 3);
-      }
+{
+if (scale == "Half")
+{
+ScaleRecipe(recipeChoice, 0.5);
+}
+if(scale == "Double")
+{
+ScaleRecipe(recipeChoice, 2);
+}
+else if (scale == "Triple")
+{
+ScaleRecipe(recipeChoice, 3);
+}
 
-  }
+}
 
-  private void ScaleRecipe(Recipe recipe, double scale)
-  {
-      foreach(Ingredient ingredient in recipe.recipeIngredients)
-      {
-          ingredient.ingredientQuantity = ingredient.ingredientQuantity * scale;
-          ingredient.ingredientCalories = ingredient.ingredientCalories * scale;
+private void ScaleRecipe(Recipe recipe, double scale)
+{
+foreach(Ingredient ingredient in recipe.recipeIngredients)
+{
+ingredient.ingredientQuantity = ingredient.ingredientQuantity * scale;
+ingredient.ingredientCalories = ingredient.ingredientCalories * scale;
 
-      }
+}
 
-  }
-  */
+}
+*/
     }
     
     }
