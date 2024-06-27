@@ -36,7 +36,7 @@ namespace st10275468_ProgPOE
         {
             if (recipeList.Count == 0)
             {
-                MessageBox.Show("No recipes available.");
+                MessageBox.Show("No recipes created");
             }
             else
             {
@@ -77,6 +77,19 @@ namespace st10275468_ProgPOE
             textBlockRecipeDetails.Text = sb.ToString();
         }
 
+        private void btnDisplayAlpha_Click(object sender, RoutedEventArgs e)
+        {
+            var sortedRecipes = recipeList.OrderBy(r => r.recipeName).ToList();
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("All recipes:");
+            foreach (var recipe in sortedRecipes)
+            {
+                sb.AppendLine(recipe.recipeName);
+            }
+
+            textBlockRecipeDetails.Text = sb.ToString();
+        }
     }
 
     

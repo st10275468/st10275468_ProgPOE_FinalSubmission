@@ -46,6 +46,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Button x:Name="btnDisplayAlpha" Content="Display all recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplayAlpha_Click" Margin="6,83,6,280" Grid.Row="1"/>
 
     </Grid>
 
