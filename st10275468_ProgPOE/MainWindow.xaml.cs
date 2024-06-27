@@ -73,6 +73,13 @@ namespace st10275468_ProgPOE
                 sb.AppendLine($"{stepNumber}. {step.GetStep()}");
                 stepNumber++;
             }
+            double totalCalories = recipe.recipeIngredients.Sum(i => i.ingredientCalories);
+            sb.AppendLine($"\nTotal Calories: {totalCalories}");
+
+            if (totalCalories > 300)
+            {
+                MessageBox.Show("Calories Exceed 300!", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 
             textBlockRecipeDetails.Text = sb.ToString();
         }
@@ -90,6 +97,7 @@ namespace st10275468_ProgPOE
 
             textBlockRecipeDetails.Text = sb.ToString();
         }
+
     }
 
     
