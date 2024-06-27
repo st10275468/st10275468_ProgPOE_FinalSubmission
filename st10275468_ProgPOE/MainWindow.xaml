@@ -36,7 +36,7 @@
 
         </StackPanel>
         <Button x:Name="btnDisplay_Copy" Content="Refresh list of recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplay_Click" Margin="5,55,299,323" Grid.Row="1" Grid.Column="1"/>
-        <Label Content="Choose a recipe to display:" Margin="13,12,0,373" Width="156" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+        <Label Content="Choose a recipe below to adjust or display:" Margin="11,7,0,378" Width="236" HorizontalAlignment="Left" FontFamily="Roboto" Padding="0,0,0,0" Foreground="Black" FontSize="12" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,7 +47,12 @@
             </Label.RenderTransform>
         </Label>
         <Button x:Name="btnDisplayAlpha" Content="Display all recipes" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnDisplayAlpha_Click" Margin="6,83,6,280" Grid.Row="1"/>
-
+        <Button x:Name="btnScale" Content="Scale recipe" Background="Black" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="10,1,1,1" FontFamily="Roboto" FontSize="14" Click="btnScale_Click" Margin="285,29,80,349" Grid.Row="1" Grid.Column="1"/>
+        <ComboBox x:Name="comboBoxScale" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,29,0,0" Width="60" Grid.Column="1" Height="22" Grid.Row="1">
+            <ComboBoxItem Content="Half"/>
+            <ComboBoxItem Content="Double"/>
+            <ComboBoxItem Content="Triple"/>
+        </ComboBox>
     </Grid>
 
 

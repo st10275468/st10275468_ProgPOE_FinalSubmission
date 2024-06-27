@@ -63,7 +63,7 @@ namespace st10275468_ProgPOE
             sb.AppendLine("Ingredients:");
             foreach (var ingredient in recipe.recipeIngredients)
             {
-                sb.AppendLine($"- {ingredient.GetIngredient()}");
+                sb.AppendLine($"{ingredient.GetIngredient()}");
             }
 
             sb.AppendLine("Steps:");
@@ -98,7 +98,57 @@ namespace st10275468_ProgPOE
             textBlockRecipeDetails.Text = sb.ToString();
         }
 
+          private void btnScale_Click(object sender, RoutedEventArgs e)
+          {
+
+              if (comboBoxRecipes.SelectedItem != null && comboBoxScale.SelectedItem != null)
+              {
+                  Recipe recipeChoice = (Recipe)comboBoxRecipes.SelectedItem;
+                  string scaleOption = comboBoxScale.SelectedItem.ToString();
+                  if (scaleOption != null)
+                  {
+                    //  ScaleChoice(recipeChoice, scaleOption);
+                    //  DisplayRecipeDetails(recipeChoice);
+                  }
+                  else
+                  {
+                      MessageBox.Show("Select a scale");
+                  }
+                  }
+              else
+              {
+                  MessageBox.Show("Select a recipe and scale");
+              }
+          }
+        /*   private void ScaleChoice( Recipe recipeChoice, string scale)
+           {
+               if (scale == "Half")
+               {
+                   ScaleRecipe(recipeChoice, 0.5);
+               }
+               if(scale == "Double")
+               {
+                   ScaleRecipe(recipeChoice, 2);
+               }
+               else if (scale == "Triple")
+               {
+                   ScaleRecipe(recipeChoice, 3);
+               }
+
+           }
+
+           private void ScaleRecipe(Recipe recipe, double scale)
+           {
+               foreach(Ingredient ingredient in recipe.recipeIngredients)
+               {
+                   ingredient.ingredientQuantity = ingredient.ingredientQuantity * scale;
+                   ingredient.ingredientCalories = ingredient.ingredientCalories * scale;
+
+               }
+
+           }
+           */
     }
 
-    
+
 }

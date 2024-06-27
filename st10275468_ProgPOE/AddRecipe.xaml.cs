@@ -68,6 +68,8 @@ namespace st10275468_ProgPOE
             currentRecipe.recipeName = txtName.Text;
             ((MainWindow)this.Owner).AddRecipeToList(currentRecipe);
             MessageBox.Show("Recipe successfully added");
+            txtName.Clear();
+            txtName.Focus();
             currentRecipe = new Recipe("");
         }
 
