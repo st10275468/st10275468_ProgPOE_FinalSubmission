@@ -120,35 +120,67 @@ namespace st10275468_ProgPOE
                   MessageBox.Show("Select a recipe and scale");
               }
           }
+
+        private void btnFilterIngredient_Click(object sender, RoutedEventArgs e)
+        {
+            string ingredientChoice = txtIngredientChoice.Text;
+            if (!string.IsNullOrEmpty(ingredientChoice))
+            {
+                List<Recipe> recipes = recipeList.Where(r => r.recipeIngredients.Any(i => i.GetIngredient().ToLower().Contains(ingredientChoice.ToLower()))).ToList();
+                DisplayFilteredRecipes(recipes);
+            }
+            else
+            {
+                MessageBox.Show("Enter an ingredient");
+            }
+        }
+        private void DisplayFilteredRecipes(List<Recipe> recipes)
+        {
+            if (recipes.Count == 0)
+            {
+                MessageBox.Show("No recipes with {0} found!", txtIngredientChoice.Text );
+            }
+            else
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("All recipes with " + txtIngredientChoice.Text +":");
+                foreach (var recipe in recipes)
+                {
+                    sb.AppendLine(recipe.recipeName);
+                }
+                textBlockRecipeDetails.Text = sb.ToString();
+            }
+        }
         /*   private void ScaleChoice( Recipe recipeChoice, string scale)
-           {
-               if (scale == "Half")
-               {
-                   ScaleRecipe(recipeChoice, 0.5);
-               }
-               if(scale == "Double")
-               {
-                   ScaleRecipe(recipeChoice, 2);
-               }
-               else if (scale == "Triple")
-               {
-                   ScaleRecipe(recipeChoice, 3);
-               }
+  {
+      if (scale == "Half")
+      {
+          ScaleRecipe(recipeChoice, 0.5);
+      }
+      if(scale == "Double")
+      {
+          ScaleRecipe(recipeChoice, 2);
+      }
+      else if (scale == "Triple")
+      {
+          ScaleRecipe(recipeChoice, 3);
+      }
 
-           }
+  }
 
-           private void ScaleRecipe(Recipe recipe, double scale)
-           {
-               foreach(Ingredient ingredient in recipe.recipeIngredients)
-               {
-                   ingredient.ingredientQuantity = ingredient.ingredientQuantity * scale;
-                   ingredient.ingredientCalories = ingredient.ingredientCalories * scale;
+  private void ScaleRecipe(Recipe recipe, double scale)
+  {
+      foreach(Ingredient ingredient in recipe.recipeIngredients)
+      {
+          ingredient.ingredientQuantity = ingredient.ingredientQuantity * scale;
+          ingredient.ingredientCalories = ingredient.ingredientCalories * scale;
 
-               }
+      }
 
-           }
-           */
+  }
+  */
+    }
+    
     }
 
 
-}
